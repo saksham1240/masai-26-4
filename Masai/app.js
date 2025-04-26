@@ -4,7 +4,6 @@ function FeedbackForm({onAddFeedback }) {
   const[name,setName] =useState('');
   const [email,setEmail] = useState('');
   const [comment,setComment] =useState('');
-  const [message, setMessage]= useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,14 +76,6 @@ function FeedbackList({ feedbacks, onDeleteFeedback }) {
   );
 }
 
-function ThemeToggle({ theme, toggleTheme }) {
-  return (
-    <button className="theme-toggle" onClick={toggleTheme}>
-      Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
-    </button>
-  );
-}
-
 function App() {
   const[feedbacks,setFeedbacks] = useState([]);
   const [theme, setTheme]=useState('light');
@@ -97,9 +88,7 @@ function App() {
     setFeedbacks(feedbacks.filter(fb => fb.id !== id));
   };
 
-  const toggleTheme = () => {
-    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
-  };
+ 
 
   return (
     <div className={`app ${theme}`}>
