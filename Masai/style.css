@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .app {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    background: linear-gradient(to right, #f0f2f5, #d9e4f5);
+    min-height: 100vh;
+    transition: all 0.3s ease;
+  }
+  
+  .app.dark {
+    background: linear-gradient(to right, #1e1e2f, #38384a);
+    color: #fff;
+  }
+  
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: grid;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .feedback-form input,
+  .feedback-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .feedback-form button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .feedback-form button:hover {
+    background: #0056b3;
+  }
+  
+  .feedback-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .feedback-item {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  
+  .feedback-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feedback-item::before {
+    content: "“";
+    font-size: 30px;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    color: #ccc;
+  }
+  
+  .feedback-item button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .feedback-item button:hover {
+    background: #cc0000;
+  }
+  
+  .theme-toggle {
+    padding: 8px 16px;
+    border: none;
+    background: #222;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .theme-toggle:hover {
+    background: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .feedback-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
